@@ -33,7 +33,7 @@ function App() {
    */
   const handleDownloadSampleFile = () => {
     const link = document.createElement('a');
-    link.href = '/src/data/sales_recovery_sample.csv';
+    link.href = '/sales_recovery_sample.csv';
     link.download = 'sales_recovery_sample.csv';
     document.body.appendChild(link);
     link.click();
@@ -48,10 +48,10 @@ function App() {
       setApiError(null);
       setIsSuccess(false);
       
-      // Fetching the file from your local directory
-      const response = await fetch('/src/data/sales_recovery_sample.csv');
+      // Fetching the file from the public directory
+      const response = await fetch('/sales_recovery_sample.csv');
       
-      if (!response.ok) throw new Error("Sample file not found.");
+      if (!response.ok) throw new Error("Sample file not found in public folder.");
       
       const blob = await response.blob();
       const file = new File([blob], 'sales_recovery_sample.csv', { type: 'text/csv' });
@@ -59,7 +59,7 @@ function App() {
       setSelectedFile(file);
     } catch (error) {
       console.error("Sample Load Error:", error);
-      setApiError({ message: "Failed to load sample file. Please ensure it exists in src/data/" });
+      setApiError({ message: "Failed to load sample file. Check if the file is in the public folder." });
     }
   };
 
