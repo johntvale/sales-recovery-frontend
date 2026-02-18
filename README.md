@@ -3,8 +3,7 @@
 ### 📖 Overview
 This is the professional web interface for the Sales Recovery BI Engine. Built with a focus on User Experience (UX) and Data Visualization, this frontend allows sales managers to upload complex datasets and receive a clean, strategic dashboard in seconds. The application is fully responsive, ensuring that strategic decisions can be made on both desktop and mobile devices.
 
-Click [here 🚀](https://sales-recovery-bi-frontend.vercel.app/) to access the live application.
-
+Click [here 🚀](https://sales-recovery-bi-frontend.vercel.app/) to access the live application.<br>
 ❗IMPORTANT: the frontend is designed to work with the FastAPI backend. Wait until the backend is ready before testing the frontend functionalities.
 
 ### ✨ Key Features
